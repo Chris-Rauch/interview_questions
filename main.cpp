@@ -5,14 +5,13 @@ using namespace std;
 #include "checkPermutations.h"
 #include "URLify.h"
 #include "palindromePermutation.h"
+#include "levenshtein.h"
 
 int main()
 {
-    const char* str = "tact coa";
-    if(isPalinPerm(str)) 
-    {
-        cout << "true\n";
-    }
+    const char* str1 = "kitten";
+    const char* str2 = "sitting";
+    levenshteinDist(str1,str2);
 
     return 0;
 }
