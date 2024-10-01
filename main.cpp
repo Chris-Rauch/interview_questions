@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 #include "isUnique.h"
@@ -6,12 +7,14 @@ using namespace std;
 #include "URLify.h"
 #include "palindromePermutation.h"
 #include "levenshtein.h"
+#include "strCompression.h"
 
 int main()
 {
-    const char* str1 = "kitten";
-    const char* str2 = "sitting";
-    levenshteinDist(str1,str2);
+    string str = "aabcccccaaa";
+    string otherStr = compressStringV2(str);
+
+    cout << "Other String: " << otherStr << endl;
 
     return 0;
 }
