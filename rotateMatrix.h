@@ -38,6 +38,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <iomanip>
+
 void swap(int& x, int& y);
 void printMatrix(int** matrix, const int& len);
 void printMatrix( const std::vector<std::vector<int>>& matrix);
@@ -130,16 +132,26 @@ void printMatrix(int** matrix, const int& len)
     }
 }
 
-void printMatrix(const std::vector<std::vector<int>>& matrix)
-{
-    std::vector<std::vector<int>>::const_iterator it;
-    for(it = matrix.cbegin(); it != matrix.cend(); ++it)
-    {
-        std::vector<int>::const_iterator v_it;
-        for(v_it = it->cbegin(); v_it != it->cend(); ++v_it)
-        {
-            std::cout << *v_it << "    ";
+void printMatrix(const std::vector<std::vector<int>>& matrix) {
+    // Find the maximum element width for uniform spacing
+    int maxWidth = 0;
+
+    // Iterate over the matrix to find the maximum element width
+    for (const auto& row : matrix) {
+        for (int element : row) {
+            int width = std::to_string(element).length();
+            if (width > maxWidth) {
+                maxWidth = width;
+            }
         }
-        std::cout << std::endl;
+    }
+
+    // Print the matrix with proper spacing
+    for (const auto& row : matrix) {
+        for (int element : row) {
+            // Set the width of each field and align the numbers
+            std::cout << std::setw(maxWidth + 2) << element;  // +2 for additional padding
+        }
+        std::cout << std::endl;  // Newline after each row
     }
 }
