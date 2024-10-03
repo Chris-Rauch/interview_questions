@@ -2,6 +2,9 @@
  *   Write an algorithm such that iif an element in an M x N matrix is 0, its
  *   entire row and column are set to zero.
  * 
+ * Source:
+ *   Cracking the Coding Interview by Gayle Laackman McDowell
+ *     Question: 1.8
 */
 
 #include <vector>
