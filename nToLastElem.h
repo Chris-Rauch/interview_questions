@@ -9,6 +9,10 @@
  * Big O:
  *   O(n) Time
  *   O(1) Memory
+ * 
+ * Source:
+ *   Cracking the Coding Interview by Gayle Laackman McDowell
+ *     Question: 2.2
 */
 
 #include <iostream>
