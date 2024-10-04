@@ -22,7 +22,7 @@
 
 /// @brief Uses a map to keep track of duplicate elements
 /// @param link_list a pointer to the list
-void removeDups(std::list<int>* link_list )
+void removeDups(std::list<int>* link_list)
 {
     std::unordered_map<int, bool> map;
 

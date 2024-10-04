@@ -6,7 +6,9 @@
  *   c++ implements a double linked list std::list. I am going to use this but 
  *   limit the list traversal to be uni-directional (left to right)
  * 
- * 
+ * Big O:
+ *   O(n) Time
+ *   O(1) Memory
 */
 
 #include <iostream>
