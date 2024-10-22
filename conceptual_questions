@@ -1,0 +1,17 @@
+Q: Describe how you could use a single array to implement three stacks.
+A: Each stack would be allocated 1/3 portion of the inital array. Each stack
+   would keep tack of its own size. Whenever the array needs to be increased in
+   size, we can just double the space of that single partition. Pointers to the
+   beginning of each stack and container size will need to be kept and 
+   maintained.
+   Each stack will have the ability to be circular within its partition.
+
+Q: How would you design a stack which, in addition to push and pop, has a
+   function min() which returns the minimum element. Push, pop and min
+   should all operate in O(1) time.
+A: The data structure would need to keep track of the minimum element in the 
+   pop and push functions. The class will also need keep track of the frequency
+   of the element
+
+Q: Imagine a (literal) stack of plates. If the stack gets to high, it might
+   topple.
