@@ -27,7 +27,7 @@ struct node
 /// @param n The desired node to be deleted
 void deleteMiddleNode(node* n)
 {
-    // make sure this node or next nose isn't null
+    // make sure this node or next node isn't null
     if(n == nullptr || n->next == nullptr) return;
 
     // set node equal to the next node

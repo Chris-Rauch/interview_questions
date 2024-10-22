@@ -17,8 +17,7 @@
  *        traverse the list, add elements to the tmp lists accordingly. Then
  *        merge the two list
  *     2) In place. Modify the list dynamically while traversing. As you come
- *        across an element, push it to the front or back of the list 
- *        accordingly.
+ *        across an element, push it to the front or back of the list.
  *   Solution 1 is esier to read and probably less prone to bugs.
  *   Solution 2 uses memory more efficiently which could be usefull for large
  *     lists
@@ -31,6 +30,9 @@
  *      O(n) Time
  *      O(1) Memory (only ever allocate one node at a time)
  * 
+ * Source:
+ *   Cracking the Coding Interview by Gayle Laackman McDowell
+ *     Question: 2.4
 */
 #include <list>
 
@@ -73,12 +75,13 @@ void partitionList(std::list<int>* list, const int& partition)
     {
         if(*it < partition)
         {
-            lesser.push_front(*it);
+            lesser.push_front(*it); 
         }
         else
         {
             upper.push_front(*it);
         }
+        // you could delete it here to save memory
     }
     list->clear();
     list->splice(list->end(), lesser);
